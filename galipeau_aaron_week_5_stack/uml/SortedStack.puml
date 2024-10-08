@@ -1,0 +1,42 @@
+@startuml
+!theme cloudscape-design
+title SortedStack Class Diagram
+caption Aaron Galipeau\n CSC6301 Software Design and Documentation\n Module 05: Assignment 01 - Project 05 - Planning and Executing a Maintenance Task\n Institution: Merrimack College\n Gautham Krishnamurthy (GK)
+skinparam BorderPadding 30
+
+class SortedStack {
+    +main(args: String[]): void
+    +pushNumbersToStack(scanner: Scanner, stack: Stack<Integer>): void
+    +sortStack(stack: Stack<Integer>): void
+}
+class Scanner {
+    +next(): String
+    +hasNext(): boolean
+    +close(): void
+}
+class Stack<Integer> {
+    +push(e: Integer): void
+}
+class Collections {
+    +sort(list: List<T>): void
+}
+class System {
+    +out: PrintStream
+}
+class PrintStream {
+    +println(x: String): void
+}
+
+SortedStack ..> Scanner : uses
+SortedStack ..> Stack : uses
+SortedStack ..> Collections : uses
+SortedStack ..> System : uses
+System --> PrintStream : has
+
+note right of SortedStack
+Reads integers from user input,
+stores them in a Stack, and sorts
+the stack in ascending order.
+end note
+
+@enduml

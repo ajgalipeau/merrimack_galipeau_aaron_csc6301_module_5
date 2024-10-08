@@ -1,0 +1,38 @@
+@startuml
+!theme cloudscape-design
+title SortedLinkedList Class Diagram
+caption Aaron Galipeau\n CSC6301 Software Design and Documentation\n Module 04: Assignment 01 - Project 04 - Linked List and Collections Framework\n Institution: Merrimack College\n Gautham Krishnamurthy (GK)
+skinparam BorderPadding 30
+
+class SortedLinkedList {
+    +main(args: String[]): void
+}
+class Scanner {
+    +next(): String
+    +hasNext(): boolean
+    +close(): void
+}
+class LinkedList<Integer> {
+    +add(e: Integer): boolean
+}
+class Collections {
+    +sort(list: List<T>): void
+}
+class System {
+    +out: PrintStream
+}
+class PrintStream {
+    +println(x: String): void
+}
+
+SortedLinkedList ..> Scanner : uses
+SortedLinkedList ..> LinkedList : uses
+SortedLinkedList ..> Collections : uses
+SortedLinkedList ..> System : uses
+System --> PrintStream : has
+
+note right of SortedLinkedList
+Reads integers from user input,
+stores in LinkedList, and sorts
+end note
+@enduml
