@@ -1,4 +1,4 @@
-# merrimack_galipeau_aaron_csc6301
+# merrimack_galipeau_aaron_csc6301_module_5
 
 This repository contains project work for Aaron Galipeau's CSC6301 Software Design and Documentation course at Merrimack College, specific to Module 5.
 
